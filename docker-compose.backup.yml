@@ -1,0 +1,11 @@
+version: "3"
+services:
+  express-docker:
+    build: .
+    ports:
+      - "3000:8007"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    env_file:
+      - ./.env
